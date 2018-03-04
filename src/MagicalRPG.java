@@ -11,25 +11,25 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MagicalRPG implements ActionListener{
+public class MagicalRPG {
   
   static MagicalGirlFrame mainframe = new MagicalGirlFrame("Magical RPG");
   
   public static void main(String[] args) {
+    //ability to load save slots?
     beginGame();
+    //initiailzeSprites()
   }
-  
-  
-  public void actionPerformed(ActionEvent e) {
-   //advance to the next text box.
-    
-    
-    
-  }
+
 
   public static void beginGame() {
     mainframe.setVisible(true);
     mainframe.scrolltextbox.scrollText(readerDemo.returnNextLine());
+  }
+
+  public static void initialize_sprites(){
+    //area for initializing sprites based on the scene?
+    //mainframe.initializeSprites();
   }
  
   

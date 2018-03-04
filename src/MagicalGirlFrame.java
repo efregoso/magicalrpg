@@ -7,12 +7,14 @@ import java.io.*;
 
 public class MagicalGirlFrame extends JFrame{
 
+    //next steps: make functioning action listeners, implement JTabbedPane with dialogue history tab
+
 	static ScrollingTextboxComp scrolltextbox = new ScrollingTextboxComp();
 	static JSplitPane pane = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 	static JPanel panel = new JPanel();
+	//DEBUGGING: layout for overlapping elements onto each other
 	//static OverlayLayout paneloverlay = new OverlayLayout(panel);
-	//^^ layout for overlapping elements onto each other.
-	//find out if java will take transparent imgs
+
 
 	public MagicalGirlFrame(String title){
 		super(title);
@@ -29,13 +31,9 @@ public class MagicalGirlFrame extends JFrame{
 		};
 		panel.add(new JLabel(new ImageIcon(img)));
 		this.setSize(900, 700);
-		//DEBUGGING: Commented out to allow user to decide when to set visible to true
-		//this.setVisible(true);
-		//DEBUGGING: moving this into main method
-		//scrolltextbox.scrollText(readerDemo.returnNextLine());
+		//DEBUGGING: setting up overlaylayout for layering sprites over background
 		//img = SeraSpriteImg.seraAngry();
-		//panel.add(new JLabel(new ImageIcon(img)));
-		//frame.setVisible(true);
+		//paneloverlay.addLayoutComponent(new JLabel(new ImageIcon(img)), null);
 		
 		this.addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e) {
