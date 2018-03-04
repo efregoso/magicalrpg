@@ -1,1 +1,1 @@
-Testing (another) commit from IntelliJ.  Please work!
+Testing (another) commit from IntelliJ.  Have changed SSH settings from Built-in to Native.  Please work!
