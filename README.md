@@ -1,1 +1,1 @@
-# magicalrpg
+Testing a commit from the command line.  Please work!
