@@ -9,10 +9,10 @@ public class MagicalGirlFrame{
 	
 	static JFrame frame = new JFrame("Magical RPG");
 	static JTextArea text = new JTextArea();
-	static JButton button = new JButton("Hello");
+	static JButton button = new JButton("Next");
+	private static ScrollingTextboxComp scrolltextbox = new ScrollingTextboxComp();
 	static JSplitPane pane = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 	static JSplitPane pane2 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, text, button);
-	static ScrollingTextboxComp scrolltextbox = new ScrollingTextboxComp();
 	static JPanel panel = new JPanel();
 	//static OverlayLayout paneloverlay = new OverlayLayout(panel);
 	//^^ layout for overlapping elements onto each other.
@@ -29,7 +29,7 @@ public class MagicalGirlFrame{
 		frame.add(pane);
 		BufferedImage img = null;
 		try {
-			img = ImageIO.read(new File("C:/Users/Elizabeth/Pictures/temp/RPGDemo/01.jpg"));
+			img = ImageIO.read(new File("C:\\Users\\Chrissy\\Google Drive (emf65@case.edu)\\Code\\Java\\MagicalRPG\\src\\RPGDemo\\01.png"));
 		}
 		catch (IOException i) {
 			System.out.println("Image did not load.");
@@ -37,9 +37,9 @@ public class MagicalGirlFrame{
 		panel.add(new JLabel(new ImageIcon(img)));
 		frame.setSize(900, 700);
 		frame.setVisible(true);
-		img = SeraSpriteImg.seraAngry();
-		panel.add(new JLabel(new ImageIcon(img)));
-		frame.setVisible(true);
+		//img = SeraSpriteImg.seraAngry();
+		//panel.add(new JLabel(new ImageIcon(img)));
+		//frame.setVisible(true);
 		
 		frame.addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e) {

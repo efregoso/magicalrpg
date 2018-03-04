@@ -11,7 +11,7 @@ public class readerDemo {
 	
 	public static void readFileDemo(){
 		try {
-			sc = new Scanner(new File("C:/Users/Elizabeth/OneDrive/Documents/Eclipse Projects/javaReaderDemo.txt"));
+			sc = new Scanner(new File("/RPGDemo/javaReaderDemo.txt"));
 		}
 		catch (FileNotFoundException e){
 			System.out.println("File not found.");
@@ -36,10 +36,10 @@ public class readerDemo {
 	public static String returnNextLine(){
 		if (sc == null){
 			try {
-				sc = new Scanner(new File("C:/Users/Elizabeth/OneDrive/Documents/Eclipse Projects/javaReaderDemo.txt"));
+				sc = new Scanner(new File("C:\\Users\\Chrissy\\Google Drive (emf65@case.edu)\\Code\\Java\\MagicalRPG\\src\\RPGDemo\\javaReaderDemo.txt"));
 			}
 			catch (FileNotFoundException e){
-				System.out.println("File not found.");
+				System.out.println("File not found: javaReaderDemo.txt");
 			}
 		}
 		if (sc.hasNextLine() != false){

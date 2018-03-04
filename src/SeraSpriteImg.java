@@ -8,7 +8,7 @@ public class SeraSpriteImg {
 	
 	public static BufferedImage seraAngry() {
 		try {
-			sprite = ImageIO.read(new File("C:/Users/Elizabeth/Pictures/temp/RPGDemo/seraspritebeta.png"));
+			sprite = ImageIO.read(new File("/RPGDemo/seraspritebeta.png"));
 		}
 		catch (IOException i){
 			System.out.println("seraAngry did not load.");

@@ -21,7 +21,7 @@ public class MagicalRPG implements ActionListener{
   public static void main(String[] args) {
     
     mainframe.getContentPane().add(panel, "Center");
-    mainframe.getContentPane().add(moveOn, "");
+    mainframe.getContentPane().add(moveOn, "East");
     mainframe.setSize(600, 800);
     mainframe.setVisible(true);
     

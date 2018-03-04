@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class ScrollingTextboxComp implements ActionListener{
+public class ScrollingTextboxComp extends JTextArea implements ActionListener{
 
 	static String string = "Hopefully, I'll be printed in a scrolling animation.";
 	static JTextArea textbox = new JTextArea();
@@ -19,13 +19,14 @@ public class ScrollingTextboxComp implements ActionListener{
 	public ScrollingTextboxComp(){
 		button.addActionListener(this);
 		textbox.setLineWrap(true);
-		textbox.setMinimumSize(new Dimension(400, 200));
 		textbox.setEditable(false);
+		textbox.setMinimumSize(new Dimension(400, 200));
 		pane.add(textbox, null, -1);
 		pane.add(button, null, -1);
 		frame.add(pane);
 		frame.setSize(500, 200);
 		frame.setVisible(true);
+		//DEBUGGING: have it scroll through Hello.
 		scrollText(readerDemo.returnNextLine());
 	}
 	
@@ -60,6 +61,6 @@ public class ScrollingTextboxComp implements ActionListener{
 	public static void main(String[] args){
 		new ScrollingTextboxComp();
 	}
-	
+
 	
 }
