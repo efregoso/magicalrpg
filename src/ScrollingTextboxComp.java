@@ -29,7 +29,7 @@ public class ScrollingTextboxComp extends JSplitPane implements ActionListener{
 	public static void scrollText(String string) {
 		for (int i = 0; i < string.length(); i++) {
 			textbox.insert(Character.toString(string.charAt(i)), i);
-			for (int j = 0; j < 100000000; j++) {
+			for (int j = 0; j < 10000000; j++) {
 				for (int k = 0; k < 10; k++){
 					//idle more
 				}

@@ -13,18 +13,10 @@ import java.awt.event.*;
 
 public class MagicalRPG implements ActionListener{
   
-  static JFrame mainframe = new JFrame("Magical RPG");
-  static JPanel panel = new JPanel();
-  static JButton moveOn = new JButton("Next");
-  
+  static MagicalGirlFrame mainframe = new MagicalGirlFrame("Magical RPG");
   
   public static void main(String[] args) {
-    
-    mainframe.getContentPane().add(panel, "Center");
-    mainframe.getContentPane().add(moveOn, "East");
-    mainframe.setSize(600, 800);
-    mainframe.setVisible(true);
-    
+    beginGame();
   }
   
   
@@ -33,6 +25,11 @@ public class MagicalRPG implements ActionListener{
     
     
     
+  }
+
+  public static void beginGame() {
+    mainframe.setVisible(true);
+    mainframe.scrolltextbox.scrollText(readerDemo.returnNextLine());
   }
  
   
