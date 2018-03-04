@@ -1,1 +1,1 @@
-Testing a commit from the command line.  Please work!
+Testing a commit from IntelliJ.  Please work!
