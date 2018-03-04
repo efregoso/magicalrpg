@@ -1,1 +1,1 @@
-Testing (another) commit from IntelliJ.  Have changed SSH settings from Built-in to Native.  Please work!
+Switched to HTTPS URL instead of SSH for committing & changed back to Built-in for SSH testing.  Testing (another) commit from IntelliJ.  Please work!
