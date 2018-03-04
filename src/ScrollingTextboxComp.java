@@ -2,14 +2,11 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class ScrollingTextboxComp extends JTextArea implements ActionListener{
+public class ScrollingTextboxComp extends JSplitPane implements ActionListener{
 
 	static String string = "Hopefully, I'll be printed in a scrolling animation.";
 	static JTextArea textbox = new JTextArea();
-	static JSplitPane pane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
-	static JButton button = new JButton("Hello");
-	static JFrame frame = new JFrame();
-	//static Scanner sc = null
+	static JButton button = new JButton("Next");
 	
 	//make the line an array, and then print each character after 0.00001 of a second.
 	//turn each char in the string into a list element
@@ -17,17 +14,15 @@ public class ScrollingTextboxComp extends JTextArea implements ActionListener{
 	//after a certain amount of time
 	
 	public ScrollingTextboxComp(){
+		super(JSplitPane.HORIZONTAL_SPLIT);
 		button.addActionListener(this);
 		textbox.setLineWrap(true);
 		textbox.setEditable(false);
-		textbox.setMinimumSize(new Dimension(400, 200));
-		pane.add(textbox, null, -1);
-		pane.add(button, null, -1);
-		frame.add(pane);
-		frame.setSize(500, 200);
-		frame.setVisible(true);
-		//DEBUGGING: have it scroll through Hello.
-		scrollText(readerDemo.returnNextLine());
+		textbox.setMinimumSize(new Dimension(700, 50));
+		this.add(textbox, null, -1);
+		this.add(button, null, -1);
+		//DEBUGGING: have it scroll through Hello
+		//this.scrollText(readerDemo.returnNextLine());
 	}
 	
 	
@@ -59,7 +54,19 @@ public class ScrollingTextboxComp extends JTextArea implements ActionListener{
 	 */
 	
 	public static void main(String[] args){
-		new ScrollingTextboxComp();
+		ScrollingTextboxComp scroller = new ScrollingTextboxComp();
+		JFrame frame = new JFrame();
+		frame.add(scroller);
+		frame.setSize(900, 200);
+		frame.setVisible(true);
+		//DEBUGGING: have it scroll through Hello
+		scrollText(readerDemo.returnNextLine());
+
+		frame.addWindowListener(new WindowAdapter(){
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
 	}
 
 	
